@@ -16,4 +16,4 @@ The input data contains 256x256 pixel images of four bands covering the visible 
 
 "
 
-I achieved a score of 0.0619 employing the pretrained ResNet50 on a 4-channel input with an 8-label class output (each output between 0 and 1, summing to 1). For the relatively small dataset I used data augmentation, which improved performance significantly. The criterion was the KL loss.
+I achieved a score of 0.0619 employing the pretrained ResNet50 on a 4-channel input with an 8-label class output (each output between 0 and 1, summing to 1). For the relatively small dataset I used data augmentation, which improved performance significantly. The criterion was the KL loss. I uploaded the full notebook, which I executed on Colab's GPU. In hindsight, I believe I would have profited from implementing some form of image segmentation. A ResUNet approach might have far outperformed my model. My model is however very fast during training, taking only about 2 minutes per epoch.
